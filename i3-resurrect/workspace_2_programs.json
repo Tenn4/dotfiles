@@ -1,0 +1,14 @@
+[
+  {
+    "command": [
+      "/opt/discord/Discord"
+    ],
+    "working_directory": "/usr/bin"
+  },
+  {
+    "command": [
+      "/opt/spotify/spotify"
+    ],
+    "working_directory": "/home/dalton"
+  }
+]
