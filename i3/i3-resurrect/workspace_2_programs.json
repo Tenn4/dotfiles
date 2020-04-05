@@ -7,7 +7,7 @@
   },
   {
     "command": [
-      "/opt/spotify/spotify"
+      "/usr/bin/kitty"
     ],
     "working_directory": "/home/dalton"
   }

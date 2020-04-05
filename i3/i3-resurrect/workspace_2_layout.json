@@ -2,7 +2,7 @@
   "border": "pixel",
   "current_border_width": -1,
   "floating": "auto_off",
-  "fullscreen_mode": 0,
+  "fullscreen_mode": 1,
   "geometry": {
     "x": 0,
     "y": 0,
@@ -12,7 +12,7 @@
   "layout": "splith",
   "name": "2",
   "orientation": "horizontal",
-  "percent": 0.3333333333333333,
+  "percent": 0.5,
   "scratchpad_state": "none",
   "sticky": false,
   "type": "workspace",
@@ -30,7 +30,7 @@
         "height": 1030
       },
       "layout": "splith",
-      "name": "#fuck-charter-communications - Discord",
+      "name": "#post_watcher - Discord",
       "orientation": "none",
       "percent": 0.5,
       "scratchpad_state": "none",
@@ -52,11 +52,11 @@
       "geometry": {
         "x": 0,
         "y": 0,
-        "width": 800,
-        "height": 600
+        "width": 624,
+        "height": 1030
       },
       "layout": "splith",
-      "name": "Spotify Premium",
+      "name": "dalton@dalton-desktop:~",
       "orientation": "none",
       "percent": 0.5,
       "scratchpad_state": "none",
@@ -65,8 +65,8 @@
       "workspace_layout": "default",
       "swallows": [
         {
-          "class": "^Spotify$",
-          "instance": "^spotify$"
+          "class": "^kitty$",
+          "instance": "^kitty$"
         }
       ]
     }
