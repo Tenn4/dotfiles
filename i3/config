@@ -42,7 +42,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 #exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id pulseaudio --start
-exec --no-startup-id pa-applet
+#exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
@@ -53,19 +53,9 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec chromium
-bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 #focus via mouse
 focus_follows_mouse no
@@ -260,7 +250,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-applet
 exec --no-startup-id pamac-tray
 # exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
@@ -268,6 +258,7 @@ exec --no-startup-id pamac-tray
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec --no-startup-id sonarr
+exec --no-startup-id qbittorrent
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -303,7 +294,7 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
-	status_command /home/dalton/.i3/bumblebee-status/bumblebee-status -m spotify cpu disk:home pasink date time -p interval=0.5 date.format="%a, %b %d %Y" time.format="%I:%M" home.path=/home -t koi 
+	status_command /home/dalton/.i3/bumblebee-status/bumblebee-status -m pomodoro cpu disk:home pasink date time -p pomodoro.work=30 pomodoro.notify="/home/dalton/Scripts/pomodoro-notify" interval=0.5 date.format="%a, %b %d %Y" time.format="%I:%M" home.path=/home -t koi 
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
@@ -398,8 +389,3 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 } 
-
-#Spotify Controls
-bindsym $mod+s+Right exec --no-startup-id "./git/spotify_controls/spotify_control next"
-bindsym $mod+s+Left exec --no-startup-id "./git/spotify_controls/spotify_control previous"
-bindsym $mod+s+space exec --no-startup-id "./git/spotify_controls/spotify_control playpause"
