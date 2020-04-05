@@ -1,0 +1,4 @@
+#!/bin/bash
+
+SOUND="/usr/share/sounds/freedesktop/stereo/bell.oga"
+notify-send -u critical "Time Up!" & paplay $SOUND
