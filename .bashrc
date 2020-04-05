@@ -140,11 +140,14 @@ ex ()
 
 #alias commands
 alias pacup="sudo pacman -Syu"
-alias i3config="sudo vim $HOME/.i3/config"
+alias i3config="nvim $HOME/.i3/config"
 alias sleep="systemctl suspend"
 alias gohome="cd $HOME" 
 alias restorelayout="i3-resurrect restore -w 1 && i3-resurrect restore -w 2 && i3-resurrect restore -w 3"
-alias pomo="muccadoro 30 -s"
+alias restart-spotifyd="systemctl --user restart spotifyd.service"
 
 #PATH
-export PATH=$PATH:$HOME/git/spotify_control 
+export PATH=$PATH:$HOME/Scripts
+
+# Kitty completion 
+source <(kitty + complete setup bash)
